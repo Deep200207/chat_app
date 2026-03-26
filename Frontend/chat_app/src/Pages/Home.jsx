@@ -29,7 +29,7 @@ export default function () {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const users = await axios(`http://localhost:3000/api/get/user?email=${user.email}`)
+      const users = await axios(`https://chat-app-backend-x8nu.onrender.com/api/get/user?email=${user.email}`)
       console.log(users)
       setFriends(users.data)
     }
@@ -49,7 +49,7 @@ export default function () {
   useEffect(() => {
     const fetchMessages = async () => {
       const res = await axios.get(
-        `http://localhost:3000/message/${user?.email}/${selected?.email}`
+        `https://chat-app-backend-x8nu.onrender.com/message/${user?.email}/${selected?.email}`
       );
       // console.log(res.data)
       setMessage(res.data);

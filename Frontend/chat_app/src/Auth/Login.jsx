@@ -16,7 +16,7 @@ export default function Login() {
             const result= await signInWithGoogle(auth,googleProvider);
             // console.log(result)
             const user= result
-            await axios.post("http://localhost:3000/api/user/firebase-login",{
+            await axios.post("https://chat-app-backend-x8nu.onrender.com/api/user/firebase-login",{
                 firebaseUid:user.uid,
                 username: user.displayName,
                 email: user.email,
